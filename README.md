@@ -1,2 +1,2 @@
-# music-notation-ontology
+# Music Notation Ontology
 Ontology for describing music notation elements.
