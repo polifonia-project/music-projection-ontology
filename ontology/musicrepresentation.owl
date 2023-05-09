@@ -56,6 +56,18 @@ The generality of this ontology and its abstraction over the represented content
     
 
 
+    <!-- http://linkedu.eu/dedalo/explanationPattern.owl#hasExplanandum -->
+
+    <owl:ObjectProperty rdf:about="http://linkedu.eu/dedalo/explanationPattern.owl#hasExplanandum"/>
+    
+
+
+    <!-- http://linkedu.eu/dedalo/explanationPattern.owl#hasExplanans -->
+
+    <owl:ObjectProperty rdf:about="http://linkedu.eu/dedalo/explanationPattern.owl#hasExplanans"/>
+    
+
+
     <!-- http://w3id.org/polifonia/ontology/jams/hasAnnotationType -->
 
     <owl:ObjectProperty rdf:about="http://w3id.org/polifonia/ontology/jams/hasAnnotationType">
@@ -420,15 +432,7 @@ E.g. a chord is composed of pitchclasses.</rdfs:comment>
 
     <!-- http://cedric.cnam.fr/isid/ontologies/MusicNote.owl#hasTitle -->
 
-    <owl:DatatypeProperty rdf:about="http://cedric.cnam.fr/isid/ontologies/MusicNote.owl#hasTitle">
-        <owl:equivalentProperty rdf:resource="https://w3id.org/polifonia/ontology/core/title"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/polifonia/ontology/core/title -->
-
-    <rdf:Description rdf:about="https://w3id.org/polifonia/ontology/core/title"/>
+    <owl:DatatypeProperty rdf:about="http://cedric.cnam.fr/isid/ontologies/MusicNote.owl#hasTitle"/>
     
 
 
@@ -646,9 +650,7 @@ E.g. a chord is composed of pitchclasses.</rdfs:comment>
 
     <!-- http://linkeddata.uni-muenster.de/ontology/musicscore#TimeSignature -->
 
-    <owl:Class rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#TimeSignature">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#TimeSignature"/>
     
 
 
@@ -1012,8 +1014,8 @@ E.g. a chord.</rdfs:comment>
      -->
 
     <rdf:Description rdf:about="https://w3id.org/polifonia/ontology/music-representation/hasConfidence">
-        <rdfs:label xml:lang="en">has confidence</rdfs:label>
         <rdfs:comment xml:lang="en">The confidence of an analysis.</rdfs:comment>
+        <rdfs:label xml:lang="en">has confidence</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 
