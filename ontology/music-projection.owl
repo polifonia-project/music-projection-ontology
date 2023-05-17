@@ -12,7 +12,6 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:core="https://w3id.org/polifonia/ontology/core/"
-     xmlns:list="http://www.ontologydesignpatterns.org/cp/owl/list.owl#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:chord="http://purl.org/ontology/chord/"
@@ -20,7 +19,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
     <owl:Ontology rdf:about="https://w3id.org/polifonia/ontology/music-projection/">
-        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl"/>
+        <owl:imports rdf:resource="https://w3id.org/polifonia/ontology/core/1.0/"/>
         <owl:imports rdf:resource="https://w3id.org/polifonia/ontology/music-representation/"/>
         <terms:creator>Andrea Poltronieri</terms:creator>
         <terms:creator>Jacopo De Bernardinis</terms:creator>
@@ -191,7 +190,7 @@
     <!-- https://w3id.org/polifonia/ontology/music-projection/hasAmbitusType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/hasAmbitusType">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/polifonia/ontology/core/classifies"/>
         <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isAmbitusTypeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Ambitus"/>
         <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/AmbitusType"/>
@@ -204,7 +203,7 @@
     <!-- https://w3id.org/polifonia/ontology/music-projection/hasCadenceType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/hasCadenceType">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/polifonia/ontology/core/classifies"/>
         <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isCadenceTypeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Cadence"/>
         <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/CadenceType"/>
@@ -230,7 +229,7 @@
     <!-- https://w3id.org/polifonia/ontology/music-projection/hasModalType -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/hasModalType">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/polifonia/ontology/core/classifies"/>
         <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isModeTypeOf"/>
         <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Mode"/>
         <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/ModeType"/>
@@ -256,6 +255,7 @@
     <!-- https://w3id.org/polifonia/ontology/music-projection/hasPitchClass -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/hasPitchClass">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/polifonia/ontology/core/isRealizedBy"/>
         <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isPitchClassOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Pitch"/>
@@ -269,7 +269,7 @@
     <!-- https://w3id.org/polifonia/ontology/music-projection/hasQuality -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/hasQuality">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#classifies"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/polifonia/ontology/core/classifies"/>
         <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isQualityOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/SpecificInterval"/>
@@ -318,7 +318,7 @@
     <!-- https://w3id.org/polifonia/ontology/music-projection/isAmbitusTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isAmbitusTypeOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/polifonia/ontology/core/isClassifiedBy"/>
         <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/AmbitusType"/>
         <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Ambitus"/>
         <rdfs:comment xml:lang="en">The relationship between an ambitus type and an ambitus it classifies.</rdfs:comment>
@@ -330,7 +330,7 @@
     <!-- https://w3id.org/polifonia/ontology/music-projection/isCadenceTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isCadenceTypeOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/polifonia/ontology/core/isClassifiedBy"/>
         <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/CadenceType"/>
         <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Cadence"/>
         <rdfs:comment xml:lang="en">The relationship between a cadence type and a cadence it classifies.</rdfs:comment>
@@ -353,7 +353,7 @@
     <!-- https://w3id.org/polifonia/ontology/music-projection/isModeTypeOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isModeTypeOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/classification.owl#isClassifiedBy"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/polifonia/ontology/core/isClassifiedBy"/>
         <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/ModeType"/>
         <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Mode"/>
         <rdfs:comment xml:lang="en">The relationship between a mode type and a mode it classifies.</rdfs:comment>
@@ -365,7 +365,7 @@
     <!-- https://w3id.org/polifonia/ontology/music-projection/isPitchClassOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isPitchClassOf">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/informationrealization.owl#realizes"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/polifonia/ontology/core/realizes"/>
         <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClass"/>
         <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Pitch"/>
         <rdfs:comment xml:lang="en">Relation between a pitch class and the pitches it is instiatied as.</rdfs:comment>
@@ -619,6 +619,7 @@
 
     <owl:Class rdf:about="http://purl.org/ontology/mto/Clef">
         <owl:equivalentClass rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Clef"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
     </owl:Class>
     
 
@@ -652,6 +653,7 @@
 
     <owl:Class rdf:about="http://purl.org/ontology/mto/Duration">
         <owl:equivalentClass rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
     </owl:Class>
     
 
@@ -1187,14 +1189,6 @@ E.g. 3</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/polifonia/ontology/music-projection/PitchClassSelection -->
-
-    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelection">
-        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Bag"/>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/polifonia/ontology/music-projection/SharpAccidental -->
 
     <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/SharpAccidental">
@@ -1554,14 +1548,6 @@ E.g. C#</rdfs:comment>
         <rdfs:label xml:lang="en">Natural accidental</rdfs:label>
         <rdfs:comment xml:lang="en">A natural accidental is an accidental that cancels previous accidentals.</rdfs:comment>
         <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Natural_(music)</rdfs:seeAlso>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelection">
-        <rdfs:label xml:lang="en">Pitch class selection</rdfs:label>
-        <rdfs:label xml:lang="en">Pitch class element</rdfs:label>
-        <rdfs:comment xml:lang="en">A pitch class selection is a set of pitch classes that are grouped together.
-
-e.g. a chord.</rdfs:comment>
-        <skos:related rdf:resource="http://purl.org/ontology/mto/HarmonicInterval"/>
     </rdf:Description>
     
 
