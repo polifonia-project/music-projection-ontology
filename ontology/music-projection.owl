@@ -563,6 +563,14 @@
     
 
 
+    <!-- http://purl.org/ontology/chord/Interval -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/chord/Interval">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Interval"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/ontology/chord/Modifier -->
 
     <owl:Class rdf:about="http://purl.org/ontology/chord/Modifier">
@@ -578,6 +586,22 @@
     <owl:Class rdf:about="http://purl.org/ontology/chord/Note">
         <owl:equivalentClass rdf:resource="https://w3id.org/polifonia/ontology/music-projection/SpelledPitchClass"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/chord/ScaleInterval -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/chord/ScaleInterval">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/GenericInterval"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/chord/SemitoneInterval -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/chord/SemitoneInterval">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/EnharmonicInterval"/>
     </owl:Class>
     
 
@@ -749,6 +773,30 @@
     
 
 
+    <!-- http://purl.org/ontology/tonality/Degree -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/tonality/Degree">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/tonality/DiatonicScale -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/tonality/DiatonicScale">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Mode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/tonality/Interval -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/tonality/Interval">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/GenericInterval"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/ontology/tonality/Key -->
 
     <owl:Class rdf:about="http://purl.org/ontology/tonality/Key">
@@ -762,6 +810,22 @@
 
     <owl:Class rdf:about="http://purl.org/ontology/tonality/Mode">
         <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Mode"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/tonality/Scale -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/tonality/Scale">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Mode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/tonality/Set -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/tonality/Set">
         <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
     </owl:Class>
     
@@ -1163,9 +1227,6 @@ E.g. 3</rdfs:comment>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A pitch is a perceptual property of a sound, related to a frequency. It is defined as the combination of a pitch class and an octave.</rdfs:comment>
-        <rdfs:label xml:lang="en">Pitch</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Pitch_(music)</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1181,10 +1242,6 @@ E.g. 3</rdfs:comment>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">The set of alla pitches that are a whole number of octaves apart.</rdfs:comment>
-        <rdfs:label xml:lang="en">Pitch class</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Pitch_class</rdfs:seeAlso>
-        <skos:altLabel xml:lang="en">PC</skos:altLabel>
     </owl:Class>
     
 
@@ -1337,6 +1394,22 @@ E.g. C#</rdfs:comment>
     <!-- http://purl.org/ontology/mto/PerfectInterval -->
 
     <owl:NamedIndividual rdf:about="http://purl.org/ontology/mto/PerfectInterval"/>
+    
+
+
+    <!-- http://purl.org/ontology/tonality/Pitch -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/tonality/Pitch">
+        <skos:related rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Pitch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/tonality/PitchClass -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/tonality/PitchClass">
+        <skos:related rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClass"/>
+    </owl:NamedIndividual>
     
 
 
@@ -1514,6 +1587,18 @@ E.g. C#</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Pitch -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Pitch"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/PitchClass -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/PitchClass"/>
+    
+
+
     <!-- https://w3id.org/polifonia/ontology/music-projection/PitchClassSelection -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelection"/>
@@ -1548,6 +1633,17 @@ E.g. C#</rdfs:comment>
         <rdfs:label xml:lang="en">Natural accidental</rdfs:label>
         <rdfs:comment xml:lang="en">A natural accidental is an accidental that cancels previous accidentals.</rdfs:comment>
         <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Natural_(music)</rdfs:seeAlso>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/polifonia/ontology/music-projection/Pitch">
+        <rdfs:comment xml:lang="en">A pitch is a perceptual property of a sound, related to a frequency. It is defined as the combination of a pitch class and an octave.</rdfs:comment>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Pitch_(music)</rdfs:seeAlso>
+        <rdfs:label xml:lang="en">Pitch</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/polifonia/ontology/music-projection/PitchClass">
+        <rdfs:label xml:lang="en">Pitch class</rdfs:label>
+        <skos:altLabel xml:lang="en">PC</skos:altLabel>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Pitch_class</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">The set of alla pitches that are a whole number of octaves apart.</rdfs:comment>
     </rdf:Description>
     
 
