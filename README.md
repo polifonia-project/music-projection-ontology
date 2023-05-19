@@ -1,4 +1,7 @@
 # Music Projection Ontology
+[![DOI](https://zenodo.org/badge/372536364.svg)](https://zenodo.org/badge/latestdoi/372536364)
+[![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
 The Music Projection Ontology allows the formalisation of the musical entities that can be the subject of an annotations. 
 This ranges from traditional musical notation (e.g. note, chords) to informal annotations (e.g. mood, danceability).
 
@@ -14,14 +17,6 @@ This ontology is hence provides the ground work for an upper ontology on music c
 ![General set of concepts](diagrams/main_concepts.drawio.png "General set of concepts")
 
 In the Figure above the main set of concepts that are more commonly extended by other ontologies are represented.
-
-## License
-
-This work is licensed under a
-[Creative Commons Attribution 4.0 International License][cc-by].
-
-
-[cc-by]: http://creativecommons.org/licenses/by/4.0/
 
 ## References
 
