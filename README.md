@@ -5,9 +5,11 @@
 The Music Projection Ontology allows the formalisation of the musical entities that can be the subject of an annotations. 
 This ranges from traditional musical notation (e.g. note, chords) to informal annotations (e.g. mood, danceability).
 
-The ontology is aligned to similar domain-specific ontologies: Chord ontology [1], MusicOWL [2], Music Theory Ontology [3], Music Note Ontology [4], Roman chord ontology [5], Music Notation ontology [6] and Tonality ontology [1].
+> 🔗 Ontology URI: [https://w3id.org/polifonia/ontology/music-projection/](https://w3id.org/polifonia/ontology/music-projection/)
 
-## General projections
+![Main diagram](diagrams/main_diagram.png "Main diagram")
+
+### General projections
 A set of general concepts has been identified. Those are then extended by other modules which model a specific interepretation of a concept.
 That is because some projections, for instance the concept of *Mode*, changes when interpreted using modern western music theory or thories from the reinassance.
 The general definition of a projection allows flexible extensions while retaining a fundamental alignment that allows different theories to be interoperable.
@@ -25,6 +27,31 @@ A graphical representation is depicted below.
 The expressivity of OWL allows the formalisation of the relation between a pitch class and an interval, as restrictions. In in the Figure below the restrictions are depicted. An in-depth explanation is given in [7].
 
 ![Pitchclass and interval restriction](diagrams/pitchclass_interval_relationship.png "Pitchclass and interval restriction")
+
+## Imported ontologies
+
+### Direct imports
+- [Core](https://w3id.org/polifonia/ontology/core)
+
+## Aligned ontologies
+- Chord ontology [1]
+- MusicOWL [2]
+- Music Theory Ontology [3]
+- Music Note Ontology [4]
+- Roman chord ontology [5]
+- Music Notation ontology [6]
+- Tonality ontology [1].
+
+
+## Statistics
+- number of classes: 165 
+- number of object properties: 172
+- number of datatype properties: 24
+- number of logical axioms: 853
+
+## License
+
+This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
 
 ## References
 
