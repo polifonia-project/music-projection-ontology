@@ -28,10 +28,88 @@ The expressivity of OWL allows the formalisation of the relation between a pitch
 
 ![Pitchclass and interval restriction](diagrams/pitchclass_interval_relationship.png "Pitchclass and interval restriction")
 
+## Competency questions addressed
+The ontology follows the [eXtreme Design](http://extremedesign.info/) methodology for ontology development. A set of competency questions have been extracted from similar works and are listed below, alongside their provenance.
+
+| ID | Competency question                                                                                       | Reference               |
+|----|-----------------------------------------------------------------------------------------------------------|-------------------------|
+| 1  | What are the dynamic indications referring to a note in the score?                                        | Music Note Ontology [4] |
+| 2  | Which are the accidental of the notes present in a score part?                                            | Music Note Ontology [4] |
+| 3  | Which are the compositions containing chords composed of X notes?                                         | MusicOWL [2]            |
+
+## Examples of SPARQL queries
+
+CQ1 - Assuming a note ?note
+```
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX core: <https://w3id.org/polifonia/ontology/core/>
+PREFIX mr: <https://w3id.org/polifonia/ontology/music-representation/>
+PREFIX mso: <http://linkeddata.uni-muenster.de/ontology/musicscore#>
+
+SELECT ?dynamic_label
+WHERE { 
+  BIND(<Note> as ?note ) .
+  
+  [] mr:hasObservation [ 
+    mr:hasSubject ?note ;
+    mr:hasSubject [
+      a mso:Dynamic ;
+      rdfs:label ?dynamic_label .
+    ]
+  ] .
+}
+```
+
+CQ2 - Assuming the score part is identified in the fragment ?fragment
+```
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX core: <https://w3id.org/polifonia/ontology/core/>
+PREFIX mr: <https://w3id.org/polifonia/ontology/music-representation/>
+PREFIX mp: <https://w3id.org/polifonia/ontology/music-projection/>
+
+SELECT ?note_label ?accidental_label
+WHERE { 
+  BIND(<Fragment> as ?fragment ) .
+  
+  ?ann mr:described ?fragment ;
+       mr:hasObservation [
+        a mp:Note ;
+        rdfs:label ?note_label
+       ] ;
+       mr:hasObservation [
+        a/rdfs:subClassOf* mp:Accidental ;
+        rdfs:label ?accidental_label
+       ] ;
+}
+```
+
+CQ3 - Assuming X is the number of notes
+```
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX core: <https://w3id.org/polifonia/ontology/core/>
+PREFIX mr: <https://w3id.org/polifonia/ontology/music-representation/>
+PREFIX mp: <https://w3id.org/polifonia/ontology/music-projection/>
+
+SELECT ?composition
+WHERE { 
+  ?composition mr:hasAnnotation [
+    mr:hasObservation [
+      mr:hasSubject ?chord
+    ] 
+  ] .
+
+  ?chord a mp:Chord ;
+         mp:isComposedOf ?note .
+}
+GROUP BY ?chord
+HAVING COUNT(?note) = X
+```
+
 ## Imported ontologies
 
 ### Direct imports
 - [Core](https://w3id.org/polifonia/ontology/core)
+- [Music Representation](https://w3id.org/polifonia/ontology/music-representation)
 
 ## Aligned ontologies
 - Chord ontology [1]
@@ -40,14 +118,14 @@ The expressivity of OWL allows the formalisation of the relation between a pitch
 - Music Note Ontology [4]
 - Roman chord ontology [5]
 - Music Notation ontology [6]
-- Tonality ontology [1].
+- Tonality ontology [1]
 
 
 ## Statistics
-- number of classes: 165 
-- number of object properties: 172
-- number of datatype properties: 24
-- number of logical axioms: 853
+- number of classes: 163 
+- number of object properties: 154
+- number of datatype properties: 20
+- number of logical axioms: 686
 
 ## License
 
