@@ -339,6 +339,24 @@
     
 
 
+    <!-- https://w3id.org/polifonia/ontology/music-projection/isComposedOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isComposedOf">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Chord"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/polifonia/ontology/music-projection/Pitch"/>
+                    <rdf:Description rdf:about="https://w3id.org/polifonia/ontology/music-projection/PitchClass"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Defines the relationship between a chord and the pitch class or pitch it is composed of.</rdfs:comment>
+        <rdfs:label xml:lang="en">is composed of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/polifonia/ontology/music-projection/isDurationOf -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isDurationOf">
@@ -520,6 +538,14 @@
     
 
 
+    <!-- http://linkeddata.uni-muenster.de/ontology/musicscore#Articulation -->
+
+    <owl:Class rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#Articulation">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+    </owl:Class>
+    
+
+
     <!-- http://linkeddata.uni-muenster.de/ontology/musicscore#Clef -->
 
     <owl:Class rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#Clef">
@@ -539,10 +565,98 @@
     
 
 
+    <!-- http://linkeddata.uni-muenster.de/ontology/musicscore#DurationAttribute -->
+
+    <owl:Class rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#DurationAttribute">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkeddata.uni-muenster.de/ontology/musicscore#Dynamic -->
+
+    <owl:Class rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#Dynamic">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkeddata.uni-muenster.de/ontology/musicscore#InterpretationMarking -->
+
+    <owl:Class rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#InterpretationMarking">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkeddata.uni-muenster.de/ontology/musicscore#Measure -->
+
+    <owl:Class rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#Measure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkeddata.uni-muenster.de/ontology/musicscore#NoteAttribute -->
+
+    <owl:Class rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#NoteAttribute">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkeddata.uni-muenster.de/ontology/musicscore#NoteLink -->
+
+    <owl:Class rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#NoteLink">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+    </owl:Class>
+    
+
+
     <!-- http://linkeddata.uni-muenster.de/ontology/musicscore#NoteSet -->
 
     <owl:Class rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#NoteSet">
         <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Chord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkeddata.uni-muenster.de/ontology/musicscore#Repeat -->
+
+    <owl:Class rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#Repeat">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkeddata.uni-muenster.de/ontology/musicscore#Staff -->
+
+    <owl:Class rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#Staff">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkeddata.uni-muenster.de/ontology/musicscore#TempoMarking -->
+
+    <owl:Class rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#TempoMarking">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkeddata.uni-muenster.de/ontology/musicscore#TimeSignature -->
+
+    <owl:Class rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#TimeSignature">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkeddata.uni-muenster.de/ontology/musicscore#Tuplet -->
+
+    <owl:Class rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#Tuplet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
     </owl:Class>
     
 
