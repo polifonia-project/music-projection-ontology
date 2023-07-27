@@ -1,0 +1,984 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/polifonia/ontology/music-projection/chord/"
+     xml:base="https://w3id.org/polifonia/ontology/music-projection/chord/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:mp="https://w3id.org/polifonia/ontology/music-projection/"
+     xmlns:mr="https://w3id.org/polifonia/ontology/music-representation/"
+     xmlns:mn1="http://cedric.cnam.fr/isid/ontologies/MusicNote.owl#"
+     xmlns:mso="http://linkeddata.uni-muenster.de/ontology/musicscore#"
+     xmlns:mto="http://purl.org/ontology/mto/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:core="https://w3id.org/polifonia/ontology/core/"
+     xmlns:list="http://www.ontologydesignpatterns.org/cp/owl/list.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:chord="http://purl.org/ontology/chord/"
+     xmlns:roman="http://w3id.org/polifonia/ontology/roman-chord/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="https://w3id.org/polifonia/ontology/music-projection/chord/">
+        <owl:imports rdf:resource="https://w3id.org/polifonia/ontology/music-projection/"/>
+        <terms:creator>Andrea Poltronieri</terms:creator>
+        <terms:creator>Jacopo De Bernardinis</terms:creator>
+        <terms:creator>Nicolas Lazzari</terms:creator>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <rdfs:comment xml:lang="en">The Music Projection Ontology allows the formalisation of the musical entities that can be subject of an annotations. This ranges from traditional musical notation (e.g. note, chords) to informal annotations (e.g. mood, danceability).</rdfs:comment>
+        <rdfs:isDefinedBy>Polifonia Ontology Network</rdfs:isDefinedBy>
+        <rdfs:label>Music Projection Ontology</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/ontology/mto/hasTonic -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/ontology/mto/hasTonic">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/polifonia/ontology/music-projection/hasTonic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://w3id.org/polifonia/ontology/roman-chord/hasQuality -->
+
+    <owl:ObjectProperty rdf:about="http://w3id.org/polifonia/ontology/roman-chord/hasQuality">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isOfChordType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemOf"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl#isDescribedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl#isDescribedBy"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/hasAccidental -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/hasAccidental">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isAccidentalOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClass"/>
+        <rdfs:comment xml:lang="en">Relation between a pitch class and an accidental.</rdfs:comment>
+        <rdfs:label xml:lang="en">has accidental</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/hasChordType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/hasChordType">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isOfChordType"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/ChordType"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/chord/Chord"/>
+        <rdfs:comment xml:lang="en">Relation between a type and a chord.</rdfs:comment>
+        <rdfs:label xml:lang="en">has chord type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/hasMode -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/hasMode">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isModeOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Key"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Mode"/>
+        <rdfs:comment xml:lang="en">Relation that identifies the mode of a key.</rdfs:comment>
+        <rdfs:label xml:lang="en">has mode</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/hasPitchClassElement -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/hasPitchClassElement">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#hasItem"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#hasPart"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isPitchClassElementOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelection"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelectionElement"/>
+        <rdfs:comment xml:lang="en">Relation between an selection of pitch classes and one element.</rdfs:comment>
+        <rdfs:label xml:lang="en">has pitch class element</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/hasPitchClassRole -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/hasPitchClassRole">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isPitchClassRoleOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelectionElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassRole"/>
+        <rdfs:comment xml:lang="en">Role of a PC element in a PC selection.</rdfs:comment>
+        <rdfs:label xml:lang="en">has pitch class role</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/hasQuality -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/hasQuality">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isQualityOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">Relation between an interval and its quality.</rdfs:comment>
+        <rdfs:label xml:lang="en">has quality</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/hasStartingPitchClass -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/hasStartingPitchClass">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isStartingPitchClassOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClass"/>
+        <rdfs:comment xml:lang="en">The reference pitch class of an interval, from which a different pitch class can be obtained by shifting by the adequate number of pitch classes.</rdfs:comment>
+        <rdfs:label xml:lang="en">has starting pitch class</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/hasTonic -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/hasTonic">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isTonicOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Key"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClass"/>
+        <rdfs:comment xml:lang="en">Relation between a key and its tonic PC.</rdfs:comment>
+        <rdfs:label xml:lang="en">has tonic</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/hasValue -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/hasValue">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isValueOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">The value of an interval is the amount of pitch classes it encompasses.</rdfs:comment>
+        <rdfs:label xml:lang="en">has value</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/isAccidentalOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isAccidentalOf">
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClass"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/isEnharmonicallyEquivalentTo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isEnharmonicallyEquivalentTo">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isEnharmonicallyEquivalentTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/chord/Chord"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/chord/Chord"/>
+        <rdfs:comment xml:lang="en">A chord is enharmonically equivalent to another chord if they have the same set of pitch class selection but different spelling.</rdfs:comment>
+        <rdfs:label xml:lang="en">is enharmonically equivalent to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/isModeOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isModeOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Mode"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Key"/>
+        <rdfs:comment xml:lang="en">Relation that identifies the key of a mode.</rdfs:comment>
+        <rdfs:label xml:lang="en">is mode of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/isOfChordType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isOfChordType">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/chord/Chord"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/ChordType"/>
+        <rdfs:comment xml:lang="en">Relation between a chord and a type.</rdfs:comment>
+        <rdfs:label xml:lang="en">is of chord type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/isPitchClassElementOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isPitchClassElementOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#itemOf"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/partof.owl#isPartOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelectionElement"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelection"/>
+        <rdfs:comment xml:lang="en">Relation between a pitch class selections and an element.</rdfs:comment>
+        <rdfs:label xml:lang="en">is pitch class element of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/isPitchClassRoleOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isPitchClassRoleOf">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassRole"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelectionElement"/>
+        <rdfs:comment xml:lang="en">PC element of a role.</rdfs:comment>
+        <rdfs:label xml:lang="en">is pitch class role of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/isQualityOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isQualityOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:comment xml:lang="en">Relation between a quality and an interval.</rdfs:comment>
+        <rdfs:label xml:lang="en">is quality of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/isRelativeTo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isRelativeTo">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/relativeTo"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/relativeTo"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:comment xml:lang="en">Relationship between two elements, where the first one is a dependency of the second one.</rdfs:comment>
+        <rdfs:label xml:lang="en">is relative to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/isStartingPitchClassOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isStartingPitchClassOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClass"/>
+        <rdfs:comment xml:lang="en">The interval a PC is reference of.</rdfs:comment>
+        <rdfs:label xml:lang="en">is starting pitch class of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/isTonicOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isTonicOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClass"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Key"/>
+        <rdfs:comment xml:lang="en">Relation between a tonic PC and its key.</rdfs:comment>
+        <rdfs:label xml:lang="en">is tonic of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/isValueOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isValueOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:comment xml:lang="en">The amount of pitch classes ranged by an interval.</rdfs:comment>
+        <rdfs:label xml:lang="en">is value of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/relativeTo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/relativeTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:comment xml:lang="en">Relationship between two elements, where the first one is defined referencing the second one.</rdfs:comment>
+        <rdfs:label xml:lang="en">relative to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/hasInversion -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/hasInversion">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/chord/Chord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Relates a chord to its inversion.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">https://en.wikipedia.org/wiki/Inversion_(music)</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">has inversion</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/hasOctave -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/hasOctave">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClass"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Defines the octave of a PC.</rdfs:comment>
+        <rdfs:label xml:lang="en">has octave</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://cedric.cnam.fr/isid/ontologies/MusicNote.owl#Voice -->
+
+    <owl:Class rdf:about="http://cedric.cnam.fr/isid/ontologies/MusicNote.owl#Voice">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Fragment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://linkeddata.uni-muenster.de/ontology/musicscore#NoteSet -->
+
+    <owl:Class rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#NoteSet">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/chord/Chord -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/chord/Chord">
+        <owl:equivalentClass rdf:resource="https://w3id.org/polifonia/ontology/music-projection/chord/Chord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/mto/Chord -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mto/Chord">
+        <owl:equivalentClass rdf:resource="https://w3id.org/polifonia/ontology/music-projection/chord/Chord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/mto/Degree -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mto/Degree">
+        <owl:equivalentClass rdf:resource="https://w3id.org/polifonia/ontology/music-projection/GenericScaleDegree"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/mto/DiatonicDegree -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mto/DiatonicDegree">
+        <owl:equivalentClass rdf:resource="https://w3id.org/polifonia/ontology/music-projection/SpecificScaleDegree"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/mto/Key -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mto/Key">
+        <owl:equivalentClass rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Key"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/mto/Pitch -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mto/Pitch">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/mto/Scale -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mto/Scale">
+        <owl:equivalentClass rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Mode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/ontology/mto/Tonic -->
+
+    <owl:Class rdf:about="http://purl.org/ontology/mto/Tonic">
+        <owl:equivalentClass rdf:resource="https://w3id.org/polifonia/ontology/music-projection/ChordRoot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/polifonia/ontology/roman-chord/BasicFunction -->
+
+    <owl:Class rdf:about="http://w3id.org/polifonia/ontology/roman-chord/BasicFunction">
+        <owl:equivalentClass rdf:resource="https://w3id.org/polifonia/ontology/music-projection/SpecificScaleDegree"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/polifonia/ontology/roman-chord/Chord -->
+
+    <owl:Class rdf:about="http://w3id.org/polifonia/ontology/roman-chord/Chord">
+        <owl:equivalentClass rdf:resource="https://w3id.org/polifonia/ontology/music-projection/chord/Chord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://w3id.org/polifonia/ontology/roman-chord/Interval -->
+
+    <owl:Class rdf:about="http://w3id.org/polifonia/ontology/roman-chord/Interval"/>
+    
+
+
+    <!-- http://w3id.org/polifonia/ontology/roman-chord/Quality -->
+
+    <owl:Class rdf:about="http://w3id.org/polifonia/ontology/roman-chord/Quality">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/ChordType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Bag -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Bag"/>
+    
+
+
+    <!-- http://www.ontologydesignpatterns.org/cp/owl/list.owl#List -->
+
+    <owl:Class rdf:about="http://www.ontologydesignpatterns.org/cp/owl/list.owl#List"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/ChordBass -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/ChordBass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/ChordTone"/>
+        <rdfs:comment xml:lang="en">The bass PC of a chord.</rdfs:comment>
+        <rdfs:label xml:lang="en">Chord bass</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Bass_note</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/ChordLeadingTone -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/ChordLeadingTone">
+        <rdfs:subClassOf rdf:resource="http://purl.org/ontology/mto/DiatonicDegree"/>
+        <rdfs:comment xml:lang="en">The leading tone PC of a chord.</rdfs:comment>
+        <rdfs:label xml:lang="en">Chord leading tone</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Leading-tone</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/ChordOrnament -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/ChordOrnament">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/NonChordTone"/>
+        <rdfs:comment xml:lang="en">An ornament in a PC is not essential in a chord but serve to decorate it.</rdfs:comment>
+        <rdfs:label xml:lang="en">Ornament</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Ornament_(music)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/ChordRoot -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/ChordRoot">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/ChordTone"/>
+        <rdfs:comment xml:lang="en">The root PC of a chord.</rdfs:comment>
+        <rdfs:label xml:lang="en">Chord root</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Root_(chord)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/ChordSuspension -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/ChordSuspension">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/NonChordTone"/>
+        <rdfs:comment xml:lang="en">A chord suspesion is when a specific note (usually a the major or minor third) is omitted or replaced.</rdfs:comment>
+        <rdfs:label xml:lang="en">Chord suspension</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Suspended_chord</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/ChordTone -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/ChordTone">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassRole"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/polifonia/ontology/music-projection/NonChordTone"/>
+        <rdfs:comment xml:lang="en">Chord tones are roles that classify a pitch class within a pitch class selection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Chord tone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/ChordType -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/ChordType">
+        <rdfs:comment xml:lang="en">Type of a chord (i.e. Major, Minor seventh, etc).</rdfs:comment>
+        <rdfs:label xml:lang="en">Chord type</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Chord_(music)#Common_types_of_chords</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/EnharmonicPitchClass -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/EnharmonicPitchClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/GenericPitchClass"/>
+        <rdfs:comment xml:lang="en">An enharmonic pitch class (EPC) is a numeric value from 1 to 12. It represents an absoute value for a pitch class. It is not possible to identify modfiers, becuase of the existance of enharmonic pitches.
+
+E.g. 9</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">Hentschel, J., Moss, F. C., McLeod, A., Neuwirth, M., &amp; Rohrmeier, M. (2022). Towards a unified model of chords in western harmony.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Enharmonic pitch class</rdfs:label>
+        <skos:altLabel xml:lang="en">EPC</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Fragment -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/Fragment"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/GenericPitchClass -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/GenericPitchClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClass"/>
+        <rdfs:comment xml:lang="en">A generic pitch class (GPC) is a symbol from A to G that representes a generically a pitch class, without taking into account modifiers and octaves.
+
+E.g. C</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">Hentschel, J., Moss, F. C., McLeod, A., Neuwirth, M., &amp; Rohrmeier, M. (2022). Towards a unified model of chords in western harmony.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Generic pitch class</rdfs:label>
+        <skos:altLabel xml:lang="en">GPC</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/GenericScaleDegree -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/GenericScaleDegree">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClass"/>
+        <rdfs:comment xml:lang="en">A generic scale degree (GSD) is a number from 1 to 7 that defines a one-to-one mapping from a GPC to a SIV. 
+
+E.g. 3</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">Hentschel, J., Moss, F. C., McLeod, A., Neuwirth, M., &amp; Rohrmeier, M. (2022). Towards a unified model of chords in western harmony.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Generic scale degree</rdfs:label>
+        <skos:altLabel xml:lang="en">GSD</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Key -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/Key">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ontology/music-projection/hasMode"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Mode"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ontology/music-projection/hasTonic"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Tonic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A key is the combination of a mode and a tonic PC,</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">Hentschel, J., Moss, F. C., McLeod, A., Neuwirth, M., &amp; Rohrmeier, M. (2022). Towards a unified model of chords in western harmony.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Key</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Mode -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/Mode">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/list.owl#List"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isTonicOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Key"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A mode is an ordered collection of SIVs.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">Hentschel, J., Moss, F. C., McLeod, A., Neuwirth, M., &amp; Rohrmeier, M. (2022). Towards a unified model of chords in western harmony.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Mode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/NonChordTone -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/NonChordTone">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassRole"/>
+        <rdfs:comment xml:lang="en">Non chord tones is a PC that is not part of the implied or expressed PCs implied in a chord by a an harmonic theory.</rdfs:comment>
+        <rdfs:label xml:lang="en">Non chord tone</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Nonchord_tone</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/PitchClass -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/PitchClass">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ontology/music-projection/hasOctave"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The set of alla pitches that are a whole number of octaves apart.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pitch class</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Pitch_class</rdfs:seeAlso>
+        <skos:altLabel xml:lang="en">PC</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/PitchClassRole -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/PitchClassRole">
+        <rdfs:comment xml:lang="en">The role of a pitch class.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pitch class role</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/PitchClassSelection -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelection">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/bag.owl#Bag"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ontology/music-projection/hasPitchClassElement"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelectionElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ontology/music-projection/hasPitchClassElement"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelectionElement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/polifonia/ontology/music-projection/chord/Chord"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/PitchClassSelectionElement -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelectionElement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl#isDescribedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isPitchClassElementOf"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ontology/music-projection/hasPitchClassRole"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassRole"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isPitchClassElementOf"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Element of a pitch class selection.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pitch class element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/SpecificScaleDegree -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/SpecificScaleDegree">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/GenericScaleDegree"/>
+        <rdfs:comment xml:lang="en">A specific scale degree (SSD) is a number from 1 to 7 plus an accidental that defines a one-to-one mapping from a GPC to a SIV. 
+
+E.g. b3</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">Hentschel, J., Moss, F. C., McLeod, A., Neuwirth, M., &amp; Rohrmeier, M. (2022). Towards a unified model of chords in western harmony.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">Specific scale degree</rdfs:label>
+        <skos:altLabel xml:lang="en">SSD</skos:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Tonic -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/Tonic">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClass"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isRelativeTo"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The tonic is the pitch class upon which a set of other note refers to. It is the first scale degree of the diatonic scale. It can be expressed as an absolute pitch class (e.g. C) or relative to another pitch class (e.g. a third over a C).</rdfs:comment>
+        <rdfs:label xml:lang="en">Tonic</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Tonic_(music)</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/chord/Chord -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-projection/chord/Chord">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl#isDescribedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl#isDescribedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ontology/music-projection/isEnharmonicallyEquivalentTo"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/polifonia/ontology/music-projection/chord/Chord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ontology/music-projection/hasInversion"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-representation/MusicProjection -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ontology/music-representation/MusicProjection"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://linkeddata.uni-muenster.de/ontology/musicscore#NoteSet -->
+
+    <owl:NamedIndividual rdf:about="http://linkeddata.uni-muenster.de/ontology/musicscore#NoteSet"/>
+    
+
+
+    <!-- http://purl.org/ontology/mto/AugmentedInterval -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/mto/AugmentedInterval">
+        <owl:sameAs rdf:resource="https://w3id.org/polifonia/ontology/music-projection/AugmentedInterval"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/mto/DiminishedInterval -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/mto/DiminishedInterval">
+        <owl:sameAs rdf:resource="https://w3id.org/polifonia/ontology/music-projection/DiminishedInterval"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/mto/HarmonicInterval -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/mto/HarmonicInterval"/>
+    
+
+
+    <!-- http://purl.org/ontology/mto/Interval -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/mto/Interval"/>
+    
+
+
+    <!-- http://purl.org/ontology/mto/MajorInterval -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/mto/MajorInterval">
+        <owl:sameAs rdf:resource="https://w3id.org/polifonia/ontology/music-projection/MajorInterval"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/mto/MinorInterval -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/mto/MinorInterval">
+        <owl:sameAs rdf:resource="https://w3id.org/polifonia/ontology/music-projection/MinorInterval"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.org/ontology/mto/PerfectInterval -->
+
+    <owl:NamedIndividual rdf:about="http://purl.org/ontology/mto/PerfectInterval"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/AugmentedInterval -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/AugmentedInterval">
+        <rdfs:comment xml:lang="en">An augmented interval can further qualify each major interval and fourths and fifths as well.</rdfs:comment>
+        <rdfs:label xml:lang="en">Augmented interval</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/DiminishedInterval -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/DiminishedInterval">
+        <rdfs:comment xml:lang="en">A diminished interval can further qualify each major interval and fourths and fifths as well.</rdfs:comment>
+        <rdfs:label xml:lang="en">Diminished interval</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Interval -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Interval">
+        <skos:broader rdf:resource="http://purl.org/ontology/mto/Interval"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/MajorInterval -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/MajorInterval">
+        <rdfs:comment xml:lang="en">A major interval can further qualify a second, third, sixts or sevenths.</rdfs:comment>
+        <rdfs:label xml:lang="en">Major interval</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/MinorInterval -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/MinorInterval">
+        <rdfs:comment xml:lang="en">A minor interval can further qualify a second, third, sixts or sevenths.</rdfs:comment>
+        <rdfs:label xml:lang="en">Minor interval</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/PerfectInterval -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/PerfectInterval">
+        <rdfs:comment xml:lang="en">A perfect interval qualifies a unisons, octaves, fourths and fifths.</rdfs:comment>
+        <rdfs:label xml:lang="en">Perfect interval</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/PitchClassSelection -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelection"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="https://w3id.org/polifonia/ontology/music-projection/PitchClassSelection">
+        <rdfs:label xml:lang="en">Pitch class selection</rdfs:label>
+        <rdfs:label xml:lang="en">Pitch class element</rdfs:label>
+        <rdfs:comment xml:lang="en">A pitch class selection is a set of pitch classes that are grouped together.
+
+e.g. a chord.</rdfs:comment>
+        <skos:related rdf:resource="http://purl.org/ontology/mto/HarmonicInterval"/>
+        <skos:related rdf:resource="http://linkeddata.uni-muenster.de/ontology/musicscore#NoteSet"/>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
