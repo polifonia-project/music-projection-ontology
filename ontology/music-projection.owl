@@ -3,6 +3,7 @@
      xml:base="https://w3id.org/polifonia/ontology/music-projection/"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:mr="https://w3id.org/polifonia/ontology/music-representation/"
+     xmlns:ns="http://creativecommons.org/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -12,16 +13,21 @@
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:cc="http://creativecommons.org/ns#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
-    <owl:Ontology rdf:about="https://w3id.org/polifonia/ontology/music-projection">
+    <owl:Ontology rdf:about="https://w3id.org/polifonia/ontology/music-projection/">
+        <rdf:type rdf:resource="http://purl.org/vocab/vann/Vocabulary"/>
         <owl:imports rdf:resource="https://w3id.org/polifonia/ontology/core/"/>
         <owl:imports rdf:resource="https://w3id.org/polifonia/ontology/music-representation/"/>
-        <dc:issued xml:lang="en">26/07/2023</dc:issued>
+        <terms:issued xml:lang="en">26/07/2023</terms:issued>
         <terms:creator>Andrea Poltronieri</terms:creator>
         <terms:creator>Jacopo De Bernardinis</terms:creator>
         <terms:creator>Nicolas Lazzari</terms:creator>
+        <terms:modified xml:lang="en">28/07/2023</terms:modified>
         <terms:description xml:lang="en">The Music Projection Ontology allows the formalisation of the musical entities that can be subject of an annotations. This ranges from traditional musical notation (e.g. note, chords) to informal annotations (e.g. mood, danceability).</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <terms:rights rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <cc:licence rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:title xml:lang="en">Music Projection Ontology</terms:title>
         <vann:preferredNamespacePrefix>mp:</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/polifonia/ontology/music-projection/"/>
@@ -275,6 +281,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ontology/music-projection/isAccidentalOf">
         <rdfs:domain rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Accidental"/>
         <rdfs:range rdf:resource="https://w3id.org/polifonia/ontology/music-projection/PitchClass"/>
+        <rdfs:comment xml:lang="en">Relation between an accidental and a pitch class.</rdfs:comment>
+        <rdfs:label xml:lang="en">is accidental of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -498,6 +506,8 @@
                 <owl:allValuesFrom rdf:resource="https://w3id.org/polifonia/ontology/music-projection/AmbitusType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment>The range of a melody in Gregorian chant.</rdfs:comment>
+        <rdfs:isDefinedBy>ambitus. In Latham, A. (Ed.), The Oxford Companion to Music. : Oxford University Press. Retrieved 28 Jul. 2023, from https://www.oxfordreference.com/view/10.1093/acref/9780199579037.001.0001/acref-9780199579037-e-235.</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Ambitus</rdfs:label>
     </owl:Class>
     
@@ -523,6 +533,8 @@
                 <owl:allValuesFrom rdf:resource="https://w3id.org/polifonia/ontology/music-projection/CadenceType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A melodic or harmonic motion conventionally associated with the ending of a phrase, section, movement, or composition.</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">Nagley, J., &amp; Whittall, A. cadence. In The Oxford Companion to Music. : Oxford University Press. Retrieved 28 Jul. 2023, from https://www.oxfordreference.com/view/10.1093/acref/9780199579037.001.0001/acref-9780199579037-e-1072.</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Cadence</rdfs:label>
     </owl:Class>
     
@@ -744,6 +756,10 @@ E.g. 3</rdfs:comment>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/polifonia/ontology/music-projection/ModeType"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">In early medieval theory the word modus was occasionally used to mean ‘interval’—for example by Hucbald of Saint-Amand (c.840–930) and Guido of Arezzo (c.991–after 1033). This meaning survived in Ornithoparcus&apos;s Musicae activae micrologus (Leipzig, 1517) and was retained in John Dowland&apos;s translation of that work, Of Moodes, or Intervals (London, 1609). It is last found in the writings of J. H. Buttstedt (1666–1727).
+
+There [...] other meanings better known today [...] that of ‘scale’ or ‘melody type’ [...]. [...] [It] covers a wide range of definition, from simple scales—arrangements of tones and semitones sometimes without any implication of a ‘tonic’ or main note—to a particular and typical melodic style or collection of motifs, perhaps with a definite ‘tonic’ and other notes in a hierarchy of importance—a meaning often found in discussions of non-European music, where melody types are widely used in non-written musical traditions [...].</rdfs:comment>
+        <rdfs:isDefinedBy xml:lang="en">Hiley, D. mode. In The Oxford Companion to Music. : Oxford University Press. Retrieved 28 Jul. 2023, from https://www.oxfordreference.com/view/10.1093/acref/9780199579037.001.0001/acref-9780199579037-e-4468.</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">Mode</rdfs:label>
     </owl:Class>
     

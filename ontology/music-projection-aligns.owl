@@ -18,20 +18,25 @@
      xmlns:chord="http://purl.org/ontology/chord/"
      xmlns:roman="http://w3id.org/polifonia/ontology/roman-chord/"
      xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:cc="http://creativecommons.org/ns#"
      xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
-    <owl:Ontology rdf:about="https://w3id.org/polifonia/ontology/music-projection-aligns">
+    <owl:Ontology rdf:about="https://w3id.org/polifonia/ontology/music-projection-aligns/">
+        <rdf:type rdf:resource="http://purl.org/vocab/vann/Vocabulary"/>
         <owl:imports rdf:resource="https://w3id.org/polifonia/ontology/music-projection/"/>
         <owl:imports rdf:resource="https://w3id.org/polifonia/ontology/core/"/>
         <owl:imports rdf:resource="https://w3id.org/polifonia/ontology/music-representation/"/>
-        <dc:issued xml:lang="en">27/07/2023</dc:issued>
+        <terms:issued xml:lang="en">27/07/2023</terms:issued>
+        <terms:modified xml:lang="en">28/07/2023</terms:modified>
         <terms:creator>Andrea Poltronieri</terms:creator>
         <terms:creator>Jacopo De Bernardinis</terms:creator>
         <terms:creator>Nicolas Lazzari</terms:creator>
         <terms:description xml:lang="en">The Aligned Music Projection Ontology aligns the Music Projection Ontology with other relevant ontologies.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <terms:rights rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
+        <cc:licence rdf:resource="https://creativecommons.org/licenses/by-sa/4.0/"/>
         <terms:title xml:lang="en">Aligned Music Projection Ontology</terms:title>
         <vann:preferredNamespacePrefix>mp-align:</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/polifonia/ontology/music-projection/"/>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/polifonia/ontology/music-projection-aligns/"/>
         <rdfs:comment xml:lang="en">The Aligned Music Projection Ontology aligns the Music Projection Ontology with other relevant ontologies.</rdfs:comment>
         <rdfs:isDefinedBy>Polifonia Ontology Network</rdfs:isDefinedBy>
         <rdfs:label>Aligned Music Projection Ontology</rdfs:label>
