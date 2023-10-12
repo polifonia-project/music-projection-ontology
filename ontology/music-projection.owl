@@ -1125,9 +1125,13 @@ E.g. C#</rdfs:comment>
     
 
 
-    <!-- https://w3id.org/polifonia/ontology/music-projection/NaturalAccidental -->
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Natural -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/NaturalAccidental"/>
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Natural">
+        <rdfs:comment xml:lang="en">A natural accidental is an accidental that cancels previous accidentals.</rdfs:comment>
+        <rdfs:label xml:lang="en">Natural</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Natural_(music)</rdfs:seeAlso>
+    </owl:NamedIndividual>
     
 
 
@@ -1168,6 +1172,26 @@ E.g. C#</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/polifonia/ontology/music-projection/TripleFlat -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/TripleFlat">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/FlatAccidental"/>
+        <rdfs:comment xml:lang="en">Three flats.</rdfs:comment>
+        <rdfs:label xml:lang="en">Triple flat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/TripleSharp -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/TripleSharp">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/SharpAccidental"/>
+        <rdfs:comment xml:lang="en">Three sharps.</rdfs:comment>
+        <rdfs:label xml:lang="en">Triple sharp</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1180,11 +1204,6 @@ E.g. C#</rdfs:comment>
         <rdfs:comment xml:lang="en">An interval is a difference between two pitch classes.</rdfs:comment>
         <rdfs:label xml:lang="en">Interval</rdfs:label>
         <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Interval_(music)</rdfs:seeAlso>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://w3id.org/polifonia/ontology/music-projection/NaturalAccidental">
-        <rdfs:comment xml:lang="en">A natural accidental is an accidental that cancels previous accidentals.</rdfs:comment>
-        <rdfs:label xml:lang="en">Natural accidental</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Natural_(music)</rdfs:seeAlso>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/polifonia/ontology/music-projection/Pitch">
         <rdfs:comment xml:lang="en">A pitch is a perceptual property of a sound, related to a frequency. It is defined as the combination of a pitch class and an octave.</rdfs:comment>
