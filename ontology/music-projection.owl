@@ -975,6 +975,15 @@ E.g. C#</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Aeolian -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Aeolian">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/ModeType"/>
+        <rdfs:label>Aeolian mode</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/polifonia/ontology/music-projection/AugmentedInterval -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/AugmentedInterval">
@@ -991,6 +1000,17 @@ E.g. C#</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/GenericPitchClass"/>
         <rdfs:label xml:lang="en">B</rdfs:label>
         <rdfs:label xml:lang="it">Si</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Breve -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Breve">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
+        <rdfs:comment>Double whole note.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
+        <rdfs:label>Breve</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1023,6 +1043,15 @@ E.g. C#</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Dorian -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Dorian">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/ModeType"/>
+        <rdfs:label>Dorian mode</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/polifonia/ontology/music-projection/DoubleFlat -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/DoubleFlat">
@@ -1048,6 +1077,17 @@ E.g. C#</rdfs:comment>
     <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/E">
         <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/GenericPitchClass"/>
         <rdfs:label xml:lang="en">E</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Eighth -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Eighth">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
+        <rdfs:comment>Eighth note.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
+        <rdfs:label>Eighth</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1099,9 +1139,29 @@ E.g. C#</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Half -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Half">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
+        <rdfs:comment>Half note.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
+        <rdfs:label>Half</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/polifonia/ontology/music-projection/Interval -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Interval"/>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Ionian -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Ionian">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/ModeType"/>
+        <rdfs:label>Ionian mode</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -1114,96 +1174,15 @@ E.g. C#</rdfs:comment>
         <rdfs:label>Long</rdfs:label>
     </owl:NamedIndividual>
     
-    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Breve">
-        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
-        <rdfs:comment>Double whole note.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
-        <rdfs:label>Breve</rdfs:label>
-    </owl:NamedIndividual>
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Whole">
-        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
-        <rdfs:comment>Whole note.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
-        <rdfs:label>Whole</rdfs:label>
-    </owl:NamedIndividual>
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Half">
-        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
-        <rdfs:comment>Half note.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
-        <rdfs:label>Half</rdfs:label>
-    </owl:NamedIndividual>
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Lydian -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Quarter">
-        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
-        <rdfs:comment>Quarter note.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
-        <rdfs:label>Quarter</rdfs:label>
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Lydian">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/ModeType"/>
+        <rdfs:label>Lydian mode</rdfs:label>
     </owl:NamedIndividual>
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Eighth">
-        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
-        <rdfs:comment>Eighth note.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
-        <rdfs:label>Eighth</rdfs:label>
-    </owl:NamedIndividual>
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Sixteenth">
-        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
-        <rdfs:comment>Sixteenth note.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
-        <rdfs:label>Sixteenth</rdfs:label>
-    </owl:NamedIndividual>
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/32th">
-        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
-        <rdfs:comment>32th note.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
-        <rdfs:label>32th</rdfs:label>
-    </owl:NamedIndividual>
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/64th">
-        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
-        <rdfs:comment>64th note.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
-        <rdfs:label>64th</rdfs:label>
-    </owl:NamedIndividual>
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/128th">
-        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
-        <rdfs:comment>128th note.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
-        <rdfs:label>128th</rdfs:label>
-    </owl:NamedIndividual>
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/256th">
-        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
-        <rdfs:comment>256th note.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
-        <rdfs:label>256th</rdfs:label>
-    </owl:NamedIndividual>
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/512th">
-        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
-        <rdfs:comment>512th note.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
-        <rdfs:label>512th</rdfs:label>
-    </owl:NamedIndividual>
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/1024th">
-        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
-        <rdfs:comment>1024th note.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
-        <rdfs:label>1024th</rdfs:label>
-    </owl:NamedIndividual>
-
-    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/2048th">
-        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
-        <rdfs:comment>2048th note.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
-        <rdfs:label>2048th</rdfs:label>
-    </owl:NamedIndividual>
+    
 
 
     <!-- https://w3id.org/polifonia/ontology/music-projection/MajorInterval -->
@@ -1222,6 +1201,15 @@ E.g. C#</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/IntervalQuality"/>
         <rdfs:comment xml:lang="en">A minor interval can further qualify a second, third, sixts or sevenths.</rdfs:comment>
         <rdfs:label xml:lang="en">Minor interval</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Mixolydian -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Mixolydian">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/ModeType"/>
+        <rdfs:label>Mixolydian mode</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1245,6 +1233,15 @@ E.g. C#</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Phrygian -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Phrygian">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/ModeType"/>
+        <rdfs:label>Phrygian mode</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/polifonia/ontology/music-projection/Pitch -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Pitch"/>
@@ -1263,12 +1260,34 @@ E.g. C#</rdfs:comment>
     
 
 
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Quarter -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Quarter">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
+        <rdfs:comment>Quarter note.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
+        <rdfs:label>Quarter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://w3id.org/polifonia/ontology/music-projection/Sharp -->
 
     <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Sharp">
         <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/SharpAccidental"/>
         <rdfs:comment xml:lang="en">One sharp.</rdfs:comment>
         <rdfs:label xml:lang="en">Sharp</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Sixteenth -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Sixteenth">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
+        <rdfs:comment>Sixteenth note.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
+        <rdfs:label>Sixteenth</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -1289,6 +1308,94 @@ E.g. C#</rdfs:comment>
         <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/SharpAccidental"/>
         <rdfs:comment xml:lang="en">Three sharps.</rdfs:comment>
         <rdfs:label xml:lang="en">Triple sharp</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/Whole -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/Whole">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
+        <rdfs:comment>Whole note.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
+        <rdfs:label>Whole</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/1024th -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/1024th">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
+        <rdfs:comment>1024th note.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
+        <rdfs:label>1024th</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/128th -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/128th">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
+        <rdfs:comment>128th note.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
+        <rdfs:label>128th</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/2048th -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/2048th">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
+        <rdfs:comment>2048th note.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
+        <rdfs:label>2048th</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/256th -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/256th">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
+        <rdfs:comment>256th note.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
+        <rdfs:label>256th</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/32th -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/32th">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
+        <rdfs:comment>32th note.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
+        <rdfs:label>32th</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/512th -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/512th">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
+        <rdfs:comment>512th note.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
+        <rdfs:label>512th</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/polifonia/ontology/music-projection/64th -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/polifonia/ontology/music-projection/64th">
+        <rdf:type rdf:resource="https://w3id.org/polifonia/ontology/music-projection/Duration"/>
+        <rdfs:comment>64th note.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://music-encoding.org/guidelines/v5/data-types/data.DURATION.cmn.html"/>
+        <rdfs:label>64th</rdfs:label>
     </owl:NamedIndividual>
     
 
