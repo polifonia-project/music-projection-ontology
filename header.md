@@ -3,8 +3,8 @@ component-id: https://w3id.org/polifonia/ontology/music-projection/
 type: Ontology
 name: Music Projection Ontology
 description: An ontology to achieve interoperability of annotation made on musical content.
-image: diagrams/main_diagram.png
-logo: assets/logo.png
+image: https://github.com/polifonia-project/music-projection-ontology/raw/main/diagrams/main_diagram.png
+logo: https://github.com/polifonia-project/music-projection-ontology/raw/main/assets/logo.png
 work-package:
 - WP2
 pilot:
@@ -13,12 +13,12 @@ project: polifonia-project
 resource: ontology/music-projection.owl
 release-date: 27/06/2023
 release-number: v1.0
-release-link: https://github.com/polifonia-project/music-projection-ontology/tag/v1.0
+release-link: https://github.com/polifonia-project/ontology-network/releases/tag/v1.0
 doi: 10.5281/zenodo.7919970
 changelog: https://github.com/polifonia-project/music-projection-ontology/tag/v1.0
 licence:
 - CC-BY_v4
-copyright: "Copyright (c) 2023 Andrea Poltronieri, Nicolas Lazzari, Jacopo De Bernardinis"
+copyright: "Copyright (c) 2023 Andrea Poltronieri, Nicolas Lazzari, Jacopo de Berardinis"
 contributors:
 - Andrea Poltronieri <https://github.com/andreamust>
 - Nicolas Lazzari <https://github.com/n28div>
@@ -29,14 +29,6 @@ related-components:
 - reuses:  
   - https://w3id.org/polifonia/ontology/core/
   - https://w3id.org/polifonia/ontology/music-representation/
-- extends: 
-- story:
-- persona:
-- documentation:
-bibliography:
-- main-publication:
-- publication:
-- deliverable-document:
 ---
 
 # Music Projection Ontology
